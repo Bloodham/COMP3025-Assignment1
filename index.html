@@ -3,20 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Bloodham&trade; Calculator Thingy</title>
+    <title>Bloodham Number Cruncher</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/Content/custom.css"/>
     <link rel="stylesheet" href="/Scripts/lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css"/>
 </head>
 <body>
-    <!-- Start Homepage Container -->
-    <div data-role="page" data-theme="b" id="portrait-calc" data-position="fixed">
-        <div data-role="header"+>
-            <h1>Number Cruncher</h1>
+    <!-- Beginning of Main Calc -->
+    <div data-role="page" data-theme="b" id="portrait-calc">
+        <div data-role="header">
+            <h1>Calculator</h1>
         </div>
-
         <!-- main content -->
-        <input type="text"  id="displayControl" data-theme="a" style="text-align: right;" value="0" />
+        <input type="text" id="displayControl" data-theme="a" style="text-align: right;"  value="0" />
         <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
             <div class="ui-grid-c">
                 <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-double-btn ui-btn-a" id="keyClear">Clear</button></div>
@@ -45,11 +44,10 @@
             </div>
         </div>
         <div data-role="footer" data-position="fixed">
-            <h1>Bloodham&Co; 2017 All Rights Reserved</h1>
+            <h3>Bloodham&trade;</h3>
         </div>
     </div>
-    <!-- End Homepage Container -->
-
+    <!-- End Of Main Calc-->
     <!-- Javascript -->
     <script src="\Scripts\lib\jquery\dist\jquery.min.js"></script>
     <script src="\Scripts\lib\jquery-mobile-bower\js\jquery.mobile-1.4.5.min.js"></script>
