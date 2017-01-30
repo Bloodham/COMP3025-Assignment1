@@ -3,53 +3,61 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <title>Bloodham Number Cruncher</title>
+    <title>Bloodham Super Duper Calculator</title>
     <!-- CSS -->
     <link rel="stylesheet" href="/Content/custom.css"/>
     <link rel="stylesheet" href="/Scripts/lib/jquery-mobile-bower/css/jquery.mobile-1.4.5.min.css"/>
-</head>
-<body>
-    <!-- Calculator Header -->
-    <div data-role="page" data-theme="b" id="portrait-calc">
-        <div data-role="header">
-            <h1>Calculator</h1>
-        </div>
-        <!-- Calculator main content -->
-        <input type="text" id="displayControl" data-theme="a" style="text-align: right;"  value="0" />
-        <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
-    <div class="ui-grid-c">
-        <div class="ui-block-a"><button data-theme="a" class="ui-btn double ui-btn-a" id="Clear">Clear</button></div>
-        <div class="ui-block-b"></div>
-        <div class="ui-block-c"><button data-theme="a" class="ui-btn back ui-btn-a ui-icon-arrow-l ui-btn-icon-bottom ui-nodisc-icon ui-alt-icon" id="C"></button></div>
-        <div class="ui-block-d"><button data-theme="a" class="ui-btn single ui-btn-a" id="Divide">&divide;</button></div>
-
-        <div class="ui-block-a"><button data-theme="a" class="ui-btn single ui-btn-a" id="7">7</button></div>
-        <div class="ui-block-b"><button data-theme="a" class="ui-btn single ui-btn-a" id="8">8</button></div>
-        <div class="ui-block-c"><button data-theme="a" class="ui-btn single ui-btn-a" id="9">9</button></div>
-        <div class="ui-block-d"><button data-theme="a" class="ui-btn single ui-btn-a" id="Multiply">X</button></div>
-
-        <div class="ui-block-a"><button data-theme="a" class="ui-btn single ui-btn-a" id="4">4</button></div>
-        <div class="ui-block-b"><button data-theme="a" class="ui-btn single ui-btn-a" id="5">5</button></div>
-        <div class="ui-block-c"><button data-theme="a" class="ui-btn single ui-btn-a" id="6">6</button></div>
-        <div class="ui-block-d"><button data-theme="a" class="ui-btn single ui-btn-a" id="Subtract">-</button></div>
-
-        <div class="ui-block-a"><button data-theme="a" class="ui-btn single ui-btn-a" id="1">1</button></div>
-        <div class="ui-block-b"><button data-theme="a" class="ui-btn single ui-btn-a" id="2">2</button></div>
-        <div class="ui-block-c"><button data-theme="a" class="ui-btn single ui-btn-a" id="3">3</button></div>
-        <div class="ui-block-d"><button data-theme="a" class="ui-btn single ui-btn-a" id="Add">+</button></div>
-
-        <div class="ui-block-a"><button data-theme="a" class="ui-btn single ui-btn-a" id="0">0</button></div>
-        <div class="ui-block-b"><button data-theme="a" class="ui-btn single ui-btn-a" id="DecimalPoint">.</button></div>
-        <div class="ui-block-d"><button data-theme="a" class="ui-btn double ui-btn-a" id="Equals">=</button></div>
-            </div>
-        </div>
-        <div data-role="footer" data-position="fixed">
-            <h3>Bloodham&trade;</h3>
-        </div>
-    </div>
-    <!-- End Of Main Calculator stuff-->
     <!-- Javascript -->
     <script src="\Scripts\lib\jquery\dist\jquery.min.js"></script>
     <script src="\Scripts\lib\jquery-mobile-bower\js\jquery.mobile-1.4.5.min.js"></script>
+    <script src="\Scripts/app.js" type="text/javascript"></script>
+</head>
+<body>
+    <!-- Calculator Header -->
+    <div data-role="page" data-theme="b" id="calculator">
+        <div id="portrait-calc">
+            <!-- header -->
+            <div data-role="header">
+                <h1>Calculator</h1>
+            </div>
+            <!-- main content -->
+            <div data-role="controlgroup" data-type="horizontal" style="text-align: center;">
+            <!-- Number Display -->
+            <input type="text" class="displayControl" id="displayControlPortrait" data-theme="a" style="text-align: right;" value="ERROR"/>
+                <!-- Calculator buttons -->
+                <div class="ui-grid-c">
+                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyClear"><font size="5">C</font></button></div>
+                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyDel"><font size="5">Del</font></button></div>
+                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keySquareRoot"><font size="6">&radic;</font></button></div>
+                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyDivide"><font size="6">&divide;</font></button></div>
+
+                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key7"><font size="6">7</font></button></div>
+                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key8"><font size="6">8</font></button></div>
+                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key9"><font size="6">9</font></button></div>
+                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyMultiply"><font size="5">X</font></button></div>
+
+                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key4"><font size="6">4</font></button></div>
+                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key5"><font size="6">5</font></button></div>
+                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key6"><font size="6">6</font></button></div>
+                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keySubtract"><font size="6">&minus;</font></button></div>
+
+                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key1"><font size="6">1</font></button></div>
+                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key2"><font size="6">2</font></button></div>
+                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key3"><font size="6">3</font></button></div>
+                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyAdd"><font size="6">+</font></button></div>
+
+                        <div class="ui-block-a"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyPlusMinus"><font size="6">&plusmn;</font></button></div>
+                        <div class="ui-block-b"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="key0"><font size="6">0</font></button></div>
+                        <div class="ui-block-c"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-a" id="keyDecimalPoint"><font size="6">.</font></button></div>
+                        <div class="ui-block-d"><button data-theme="a" class="ui-btn custom-single-btn ui-btn-b" id="keyEquals"><font size="6">=</font></button></div>
+                </div>
+            </div>
+            <!-- footer -->
+            <div data-role="footer" data-position="fixed">
+                <h3>@Bloodham</h3>
+            </div>
+        </div>
+    </div>
+    <!-- End calculator Container -->
 </body>
 </html>

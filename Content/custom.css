@@ -1,16 +1,23 @@
 /* Custom CSS File */
-.double {
-    width: 123px !important;
-    height: 35px !important;
-}
-.single {
+.custom-single-btn {
     width: 45px !important;
     height: 35px !important;
 }
-.back {
-    width: 45px !important;
-    height: 6px !important;
+
+.portrait.ui-grid-c.ui-block-a, .portrait.ui-grid-c.ui-block-b, .portrait.ui-grid-c.ui-block-c, .portrait.ui-grid-c.ui-block-d {
+    background-color: lightgray;
+    border: 1px solid black;
+    height: 60px;
+    font-weight: bold;
+    text-align: center;
+    padding: 120px;
 }
-#Equals{
-    width: 122px !important;
+
+#portrait-calc div.ui-input-text { 
+    width: 310px !important;
+    font: bolder 150% arial, sans-serif !important;
+}
+
+.ui-btn-b {
+    background: blue !important;
 }
