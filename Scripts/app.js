@@ -2,9 +2,8 @@
 Ryan Jameson
 Assignment 1
 COMP3068
-January 29th, 2017
-app.js file
-This file holds all the functions and variables used for the Calculator
+app.js file that holds variables and functions
+January 21st, 2017
 */
 
 $(document).on("pagecreate", "#calculator", function() {
