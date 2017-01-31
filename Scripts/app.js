@@ -1,3 +1,11 @@
+/*
+Ryan Jameson
+Assignment 1
+COMP3068
+app.js file
+This file holds all the functions and variables used for the Calculator
+*/
+
 $(document).on("pagecreate", "#calculator", function() {
 
     //Makes display field a read only in both views
