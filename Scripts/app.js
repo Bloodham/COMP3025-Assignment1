@@ -87,37 +87,30 @@ $(document).on("pagecreate", "#calculator", function() {
             break;
         }
     });
-
         //adds two numbers by each other
     addition = function(accumulatorOperand, currentOperand) {
         return (accumulatorOperand + currentOperand);
     };
-
        //subtracts two mumbers by each other
     subtraction = function(accumulatorOperand, currentOperand) {
         return (accumulatorOperand - currentOperand);
     };
-
     //Multiplies two numbers by each other
     multiplication = function(accumulatorOperand, currentOperand) {
         return (accumulatorOperand * currentOperand);
     };
-
     //divides two numbers by each other
     division = function(accumulatorOperand, currentOperand) {
         if (currentOperand == 0) {
-            alert("Unable to divide by 0");
             return 0;
         }
         return (accumulatorOperand / currentOperand);
     };
-
     //gets the squareroot
     getSquareRoot = function() {
         displayValue = parseFloat(getDisplayValue())
         setDisplayValue(Number(Math.sqrt(parseFloat(getDisplayValue())).toFixed(5)));
     };
-
     //Changes the number between negative to positive
     plusMinusSwitch = function() {
         displayValue = parseFloat(getDisplayValue());
@@ -128,7 +121,6 @@ $(document).on("pagecreate", "#calculator", function() {
             setDisplayValue(displayValue.toString().replace("-", ""));
         }
     };
-
     //Function does the operations depending on the number
     calculate = function() {
         //if no operators have been entered, don't finish the function
@@ -167,16 +159,13 @@ $(document).on("pagecreate", "#calculator", function() {
                 accumulator = newDisplayValue;
             }
             else{
-                alert("The calculation is to big \nThe answer is: " + newDisplayValue);
                 setDisplayValue(accumulator);
             }
         }
         else{
-            alert("The calculation is to big to be calculated by the calculator");
             setDisplayValue(accumulator);
         }
     };
-
     //function changes the value shown
     setDisplayValue = function(value) {
         display.val(value);
@@ -186,7 +175,6 @@ $(document).on("pagecreate", "#calculator", function() {
     getDisplayValue = function() {
         return display.val() + "";
     };
-
     //function clears the display and resets values
     clearDisplay = function() {
         accumulator = null;
@@ -195,7 +183,6 @@ $(document).on("pagecreate", "#calculator", function() {
     
         setDisplayValue("0");
     };
-
     //function removes the last number in the display
     deleteOperand = function() {
         var displayValue = getDisplayValue();
@@ -208,7 +195,6 @@ $(document).on("pagecreate", "#calculator", function() {
             setDisplayValue(displayValue);
         }
     };
-
     //function handles the number and button presses
     enterOperand = function(buttonValue) {
         //if a new number is set, or if the display is 0, the display is set to the number that is pushed
@@ -220,7 +206,6 @@ $(document).on("pagecreate", "#calculator", function() {
         else{
             //makes sure that the current value shown is greater than the max display number. 
             if(getDisplayValue().toString().length + 1 > 14){
-                alert("Cannot enter more than 14 operands");
             }
             else{
                 //check if . already exists in the current display value
@@ -233,7 +218,6 @@ $(document).on("pagecreate", "#calculator", function() {
             }
         }
     };
-
     //function handles the button presses
     setOperator = function(operatorValue) {
         if(operatorValue === "="){

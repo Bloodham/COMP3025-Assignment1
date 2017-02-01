@@ -1,16 +1,11 @@
-/* Custom CSS File */
+/* Custom CSS File 
+Ryan Jameson
+COMP3025
+Jan 19th, 2017
+*/
 .custom-single-btn {
     width: 45px !important;
     height: 35px !important;
-}
-
-.portrait.ui-grid-c.ui-block-a, .portrait.ui-grid-c.ui-block-b, .portrait.ui-grid-c.ui-block-c, .portrait.ui-grid-c.ui-block-d {
-    background-color: lightgray;
-    border: 1px solid black;
-    height: 60px;
-    font-weight: bold;
-    text-align: center;
-    padding: 120px;
 }
 
 #portrait-calc div.ui-input-text { 
